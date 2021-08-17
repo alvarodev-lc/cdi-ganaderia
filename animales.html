@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GAG</title>
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="resources/css/styles.css">
+
+  <!-- Integración de CSS bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+  </head>
+
+<body>
+  <!-- Barra Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-orange">
+    <a class="navbar-brand" href="index.html">
+      <img src="resources/img/cow.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      GAG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="animales.html">Animales<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="alimentacion.html">Alimentación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="instalaciones.html">Instalaciones</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pt-sm-3 pb-sm-4 px-sm-4 bg-lightgrey">
+
+    <img src="resources/img/sheep-head.svg" width="40" height="40" class="float-left mt-sm-3 mr-sm-3" alt="">
+    <h1 class="display-4">Animales</h1>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb bg-lightgrey">
+      <ol class="breadcrumb m-sm-n3">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Animales</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div id="afamily">
+  </div>
+
+  <div class="row px-sm-2 py-sm-3">
+    <div class="col-md-3">
+      <a href="index.html" class="btn btn-secondary">
+        <svg class="bi bi-arrow-left-short" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+            clip-rule="evenodd" />
+          <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd" />
+        </svg>
+        Volver
+      </a>
+    </div>
+    <div class="col-md-9 text-right">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addFForm">Añadir Familia</button>
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal Nueva Familia -->
+  <div class="modal fade" id="addFForm" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="resources/img/sheep-head.svg" width="25" height="25" class="d-inline-block mt-sm-1 mr-sm-1" alt="">
+          <h5 class="modal-title" id="staticBackdropLabel">Nueva Familia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="modal-body">
+
+
+            <div class="form-group">
+              <label for="familyName">Nombre</label>
+              <input type="text" class="form-control" id="familyName" required>
+              <small class="form-text text-muted">El nombre de tu nueva familia ha de ser único.</small>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Añadir</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Eliminar -->
+  <div class="modal fade" id="removeForm" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <svg class="bi bi-trash pt-sm-1 pr-sm-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+            <path fill-rule="evenodd"
+              d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+              clip-rule="evenodd" />
+          </svg>
+          <h5 class="modal-title" id="staticBackdropLabel">Eliminar Familia</h5>
+          <button type="button" onClick="setFam()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p>¿Estás seguro? Esta familia y todos sus animales serán borrados.</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" onClick="setFam()" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" onclick="removeFamily()" data-dismiss="modal" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Eliminar Animal -->
+  <div class="modal fade" id="removeAForm" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <svg class="bi bi-trash pt-sm-1 pr-sm-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+            <path fill-rule="evenodd"
+              d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+              clip-rule="evenodd" />
+          </svg>
+          <h5 class="modal-title" id="staticBackdropLabel">Eliminar Animal</h5>
+          <button type="button" onClick="setFam()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p>¿Estás seguro? Este animal y todos sus datos serán borrados</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" onClick="setFam()" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" onclick="deleteElement()" data-dismiss="modal" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Editar Animal -->
+  <div class="modal fade" id="editAForm" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Editar Animal</h5>
+          <button type="button" onclick="cancelEdit()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="modal-body">
+
+            <!-- Formulario Tempalte -->
+
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="exampleInputEmail1">Id</label>
+                <input type="number" class="form-control" id="ide" required>
+              </div>
+              <div class="form-group col-md-9">
+                <label for="exampleInputEmail1">Nombre*</label>
+                <input type="text" class="form-control" id="namee" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="sex">Género*</label>
+                <select class="custom-select" id="sexe" required>
+                  <option id="os" selected disabled value="">Seleccionar</option>
+                  <option id="om" value="Macho">Macho</option>
+                  <option id="oh" value="Hembra">Hembra</option>
+                </select>
+              </div>
+              <div class="form-group col-md-8">
+                <label for="race">Raza*</label>
+                <input type="text" class="form-control" id="racee" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="date">Fecha Nacimiento*</label>
+                <input type="date" class="form-control" id="datee" required>
+              </div>
+              <div class="form-group col-md-7">
+                <label for="race">Estado*</label>
+                <select class="custom-select" id="statee" required>
+                  <option id="os2" selected disabled value="">Seleccionar</option>
+                  <option id="osa" value="Sano">Sano</option>
+                  <option id="oen" value="Enfermo">Enfermo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="cancelEdit()" class="btn btn-secondary"
+              data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Añadir Animal -->
+  <div class="modal fade" id="addForm" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Animal Nuevo</h5>
+          <button type="button" onClick="setFam()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="modal-body">
+
+            <!-- Formulario -->
+
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="exampleInputEmail1">Id</label>
+                <input type="number" class="form-control" id="id" required>
+              </div>
+              <div class="form-group col-md-9">
+                <label for="exampleInputEmail1">Nombre*</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="sex">Género*</label>
+                <select class="custom-select" id="sex" required>
+                  <option selected disabled value="">Seleccionar</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Hembra">Hembra</option>
+                </select>
+              </div>
+              <div class="form-group col-md-8">
+                <label for="race">Raza*</label>
+                <input type="text" class="form-control" id="race" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="date">Fecha Nacimiento*</label>
+                <input type="date" class="form-control" id="date" required>
+              </div>
+              <div class="form-group col-md-7">
+                <label for="race">Estado*</label>
+                <select class="custom-select" id="state" required>
+                  <option selected disabled value="">Seleccionar</option>
+                  <option value="Sano">Sano</option>
+                  <option value="Enfermo">Enfermo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onClick="setFam()" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Añadir</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Añadir/Eliminar JS -->
+  <script src="resources/js/dynamic-list.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              endEdit()
+              createAnimal()
+              addFamily()
+            }
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+  <!-- Integración de JS bootstrap (animaciones) -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

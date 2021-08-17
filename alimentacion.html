@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png" />
+    <title>GAG</title>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="resources/css/styles.css">
+
+    <!-- Integración de CSS bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-orange">
+        <a class="navbar-brand" href="index.html">
+            <img src="resources/img/cow.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            GAG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="animales.html">Animales</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="alimentacion.html">Alimentación<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="instalaciones.html">Instalaciones</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid pt-sm-3 pb-sm-4 px-sm-4 bg-lightgrey">
+
+        <img src="resources/img/ali_icon.png" width="40" height="40" class="float-left mt-sm-3 mr-sm-3" alt="">
+        <h1 class="display-4">Alimentación</h1>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb bg-lightgrey">
+            <ol class="breadcrumb m-sm-n3">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Animales</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="" id="Piensos">
+
+        <div class="container-fluid bg-grey text-center" id="HeaderVitalvit">
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+            <p class="lead category d-inline-block align-middle">Vitalvit</p>
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+        </div>
+
+        <div class="py-sm-3 px-sm-4 bg-darkwhite">
+            <div class="row ">
+                <div class="card-deck" id="Vitalvit">
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Rizada">
+                            <div class="card-body">
+                                <h5 class="card-title">Rizada</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 21</li>
+                                    <li class="list-group-item">Estado: ENFERMO</li>
+                                    <li class="list-group-item" id="ingestaEdit">Ingesta diaria: 310g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#editForm" onclick="bonitoIngesta()">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Rizada')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Brenda">
+                            <div class="card-body">
+                                <h5 class="card-title">Brenda</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 11</li>
+                                    <li class="list-group-item">Estado: ENFERMO</li>
+                                    <li class="list-group-item">Ingesta diaria: 225g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Brenda')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row bg-lightgrey pl-sm-4" id="BotonesVitalvit">
+
+            <div class="py-sm-3 px-sm-1"
+                onclick="setPienso('Vitalvit'),setHeader('HeaderVitalvit'),setBotones('BotonesVitalvit')">
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#removeForm">
+                    <svg class="bi bi-trash" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Eliminar Pienso
+                </button>
+            </div>
+
+            <div class="py-sm-3 px-sm-1" onclick="setPienso('Vitalvit')">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addForm">
+                    <svg class="bi bi-plus" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Añadir Animal
+                </button>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-grey text-center" id="HeaderKalberkost">
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+            <p class="lead category d-inline-block align-middle">Kalberkost</p>
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+        </div>
+
+        <div class="py-sm-3 px-sm-4 bg-darkwhite">
+            <div class="row">
+                <div class="card-deck" id="Kalberkost">
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Alicia">
+                            <div class="card-body">
+                                <h5 class="card-title">Alicia</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 4</li>
+                                    <li class="list-group-item">Estado: SANO</li>
+                                    <li class="list-group-item">Ingesta diaria: 120g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Alicia')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Milka">
+                            <div class="card-body">
+                                <h5 class="card-title">Milka</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 3</li>
+                                    <li class="list-group-item">Estado: SANO</li>
+                                    <li class="list-group-item">Ingesta diaria: 170g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Milka')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Vincent van Goat">
+                            <div class="card-body">
+                                <h5 class="card-title">Vincent van Goat</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 14</li>
+                                    <li class="list-group-item">Estado: SANO</li>
+                                    <li class="list-group-item">Ingesta diaria: 200g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Vincent van Goat')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row bg-lightgrey pl-sm-4" id="BotonesKalberkost">
+
+            <div class="py-sm-3 px-sm-1"
+                onclick="setPienso('Kalberkost'),setHeader('HeaderKalberkost'),setBotones('BotonesKalberkost')">
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#removeForm">
+                    <svg class="bi bi-trash" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Eliminar Pienso
+                </button>
+            </div>
+
+            <div class="py-sm-3 px-sm-1" onclick="setPienso('Kalberkost')">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addForm">
+                    <svg class="bi bi-plus" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Añadir Animal
+                </button>
+            </div>
+        </div>
+        <div class="container-fluid bg-grey text-center" id="HeaderDeuka">
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+            <p class="lead category d-inline-block align-middle">Deuka</p>
+            <img src="resources/img/piensos.svg" class="low-op" width="30" height="30">
+        </div>
+
+        <div class="py-sm-3 px-sm-4 bg-darkwhite">
+            <div class="row">
+                <div class="card-deck" id="Deuka">
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Eli">
+                            <div class="card-body">
+                                <h5 class="card-title">Eli</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 5</li>
+                                    <li class="list-group-item">Estado: SANO</li>
+                                    <li class="list-group-item">Ingesta diaria: 300g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Eli')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                    <nuevoanimal>
+                        <div class="card shadow-sm" id="Lori">
+                            <div class="card-body">
+                                <h5 class="card-title">Lori</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Id: 6</li>
+                                    <li class="list-group-item">Estado: SANO</li>
+                                    <li class="list-group-item">Ingesta diaria: 100g</li>
+                                </ul>
+                                <p class="card-text"> </p>
+                                <button href="#" class="btn btn-outline-danger">
+                                    <svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <button href="#" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#removeAForm" onclick="setAnimal('Lori')">
+                                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nuevoanimal>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-lightgrey pl-sm-4" id="BotonesDeuka">
+
+            <div class="py-sm-3 px-sm-1"
+                onclick="setPienso('Deuka'),setBotones('BotonesDeuka'),setHeader('HeaderDeuka')">
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#removeForm">
+                    <svg class="bi bi-trash" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Eliminar Pienso
+                </button>
+            </div>
+
+            <div class="py-sm-3 px-sm-1" onclick="setPienso('Deuka')">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addForm">
+                    <svg class="bi bi-plus" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Añadir Animal
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Botón para añadir piensos -->
+
+    <div class="row px-sm-2 py-sm-3">
+        <div class="col-md-3">
+            <a href="index.html" class="btn btn-secondary">
+                <svg class="bi bi-arrow-left-short" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                        clip-rule="evenodd" />
+                </svg>
+                Volver
+            </a>
+        </div>
+        <div class="col-md-9 text-right">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addFForm">Añadir
+                Pienso</button>
+        </div>
+    </div>
+
+    <!-- Modal Editar Ingesta-->
+
+    <div class="modal fade" id="editForm" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="resources/img/piensos.svg" width="25" height="25" class="d-inline-block mt-sm-1 mr-sm-1"
+                        alt="">
+                    <h5 class="modal-title" id="staticBackdropLabel">Editar Ingesta Diaria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="gramosIngesta">Ingesta diaria</label>
+                            <input type="text" class="form-control" id="gramosIngesta">
+                            <small class="form-text text-muted">Añadir los gramos diarios de piensos que consume el
+                                animal</small>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="editIngesta()" data-dismiss="modal"
+                        class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal Nuevo Pienso-->
+    <div class="modal fade" id="addFForm" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="resources/img/piensos.svg" width="25" height="25" class="d-inline-block mt-sm-1 mr-sm-1"
+                        alt="">
+                    <h5 class="modal-title" id="staticBackdropLabel">Nuevo Pienso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="nombrePienso">Nombre del Pienso</label>
+                            <input type="text" class="form-control" id="nombrePienso">
+                            <small class="form-text text-muted">El nombre del pienso ha de ser único.</small>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="addPienso()" data-dismiss="modal"
+                        class="btn btn-primary">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Modal Añadir Animal -->
+    <div class="modal fade" id="addForm" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="resources/img/sheep-head.svg" width="25" height="25"
+                        class="d-inline-block mt-sm-1 mr-sm-1" alt="">
+                    <h5 class="modal-title" id="staticBackdropLabel">Añadir animal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Formulario -->
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombrePropio">Animal*</label>
+                                <select class="custom-select" id="nombrePropio">
+                                    <option selected disabled>Seleccionar</option>
+                                    <option value="Carmen">Carmen</option>
+                                    <option value="Paca">Paca</option>
+                                    <option value="Copo de nieve">Copo de nieve</option>
+                                    <option value="Margarita">Margarita</option>
+                                    <option value="Ramsey">Ramsey</option>
+                                    <option value="Molly">Molly</option>
+                                    <option value="Pati">Pati</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ingestaDiaria">Ingesta Diaria*</label>
+                                <input type="text" class="form-control" id="ingestaDiaria">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="addAnimal()" data-dismiss="modal"
+                        class="btn btn-primary">Añadir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar Pienso -->
+    <div class="modal fade" id="removeForm" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <svg class="bi bi-trash pt-sm-1 pr-sm-1" width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar Pienso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <p>¿Estás seguro? Este pienso y todos sus datos serán borrados</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="removePienso()" data-dismiss="modal"
+                        class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar Animal -->
+    <div class="modal fade" id="removeAForm" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <svg class="bi bi-trash pt-sm-1 pr-sm-1" width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar Animal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <p>¿Estás seguro de que deseas que el animal deje de consumir este pienso?</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="removeAnimal()" data-dismiss="modal"
+                        class="btn btn-danger">Sí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Alerta -->
+    <div class="modal fade" id="alert" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <svg class="bi bi-exclamation-diamond-fill mt-sm-2 mr-sm-1" width="1.3em" height="1.3em" viewBox="0 0 16 16"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM8 4a.905.905 0 00-.9.995l.35 3.507a.552.552 0 001.1 0l.35-3.507A.905.905 0 008 4zm.002 6a1 1 0 100 2 1 1 0 000-2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h5 class="modal-title" id="staticBackdropLabel">¡Alerta de Temperatura!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <p>La temperatura de la instalación <b style="color:firebrick">Vacas</b> es anómala y supera los límites recomendados.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ignorar</button>
+                    <a href="instalaciones.html" class="btn btn-primary">
+                        <svg class="bi bi-bell-fill mb-sm-1" width="1em" height="1em" viewBox="0 0 16 16"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 16a2 2 0 002-2H6a2 2 0 002 2zm.995-14.901a1 1 0 10-1.99 0A5.002 5.002 0 003 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                        </svg>
+                        Ir a instalaciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Integración de JS bootstrap (animaciones) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- Añadir/Eliminar JS -->
+    <script src="resources/js/alimentacion.js"></script>
+</body>
+
+</html>

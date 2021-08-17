@@ -1,0 +1,95 @@
+/* Clases */
+.bg-orange {
+    background-color: #FF971D!important;
+}
+
+.bg-grey {
+    background-color: #CDCDCD!important;
+}
+
+.bg-lightgrey {
+    background-color: #E5E5E5!important;
+}
+
+.bg-darkwhite {
+    background-color: rgb(240, 240, 240)!important;
+}
+
+.select:hover {
+    background-color: rgb(255, 201, 140);
+}
+
+.btn-success {
+    background-color: #F4BA47 !important;
+    border-color: #F4BA47 !important;
+}
+
+.btn-success:hover {
+    background-color: #CD9746!important;
+    border-color: #CD9746 !important;
+}
+
+.btn-primary {
+    background-color: #FA8652!important;
+    border-color: #FA8652!important;
+}
+
+.btn-primary:hover {
+    background-color: #C06341!important;
+    border-color: #C06341!important;
+}
+
+.btn-info {
+    background-color: #635EDE!important;
+    border-color: #635EDE!important;
+}
+
+.btn-info:hover {
+    background-color: rgb(68, 60, 167)!important;
+    border-color: rgb(68, 60, 167)!important;
+}
+
+.badge-primary {
+    background-color: #FA8652 !important;
+}
+
+.low-op {
+    opacity: .7;
+}
+
+.lil-op {
+    opacity: .75;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+}
+
+.zoom {
+    overflow: hidden!important;
+    transition: all .2s ease!important;
+}
+
+.zoom:hover {
+   transform: scale(1.03)!important;
+   transition: all .2s ease!important;
+}
+
+.breadcrumb {
+    background-color: #E5E5E5!important;
+}
+
+.category {
+    font-size: x-large!important;
+    margin: 0px;
+}
+
+.cardhover:hover {
+    border-color: #FF971D;
+}
+
+.row {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}

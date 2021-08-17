@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+    <title>GAG</title>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="resources/css/styles.css">
+
+    <!-- Integración de CSS bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-orange">
+        <a class="navbar-brand" href="index.html">
+            <img src="resources/img/cow.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            GAG
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="animales.html">Animales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="alimentacion.html">Alimentación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="instalaciones.html">Instalaciones</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid bg-ligthgrey">
+        <div class="container text-center">
+            <h1 class="display-4">Gestion Animal Ganadera</h1>
+            <p class="lead">¡Bienvenido de nuevo a GAG! Controla toda tu explotación ganadera desde las siguientes secciones.
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Tarjetas -->
+        <div class="container-fluid px-lg-4">
+            <div class="card-deck mt-3">
+                <div class="card shadow select zoom" style="width: 18rem;">
+                    <img src="resources/img/animales.png" class="img-fluid" alt="">
+                    <div class="card-body">
+                        <img src="resources/img/sheep-head.svg" width="25" height="25" class="float-left mr-sm-2" alt="">
+                        <h5 class="card-title">Animales</h5>
+                        <p class="card-text">Control de Animales. Gestiona todo lo referente a los ejemplares
+                            criados en tus instalaciones.
+                        </p>
+                        <a href="animales.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card shadow select zoom" style="width: 18rem;">
+                    <img src="resources/img/alimentacion.png" class="img-fluid" alt="">
+                    <div class="card-body">
+                        <img src="resources/img/ali_icon.png" width="25" height="25" class="float-left mr-sm-2" alt="">
+                        <h5 class="card-title">Alimentación</h5>
+                        <p class="card-text">Control de Alimentación. Regula las ingestas, tipos de piensos y
+                            asignación de los mismos.
+                        </p>
+                        <a href="alimentacion.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card shadow select zoom" style="width: 18rem;">
+                    <img src="resources/img/instalaciones.png" class="img-fluid" alt="">
+                    <div class="card-body">
+                        <img src="resources/img/barn.svg" width="25" height="25" class="float-left mr-sm-2" alt="">
+                        <h5 class="card-title">Instalaciones</h5>
+                        <p class="card-text">Control de Instalaciones. Monitoriza y controla parámetros
+                            relativos a las condiciones de las instalaciones.
+                        </p>
+                        <a href="instalaciones.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+    <footer class="footer font-small bg-grey container-fluid">
+        <div class="footer-copyright text-center py-3">
+            <img src="resources/img/cow.png" width="20" height="20" class="d-inline-block low-op mb-sm-1" alt="">
+            © 2020 GAG, Inc.
+        </div>
+    </footer>
+
+    <!-- Integración de JS bootstrap (animaciones) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

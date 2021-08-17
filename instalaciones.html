@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GAG</title>
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="resources/css/styles.css">
+
+  <!-- Integración de CSS bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+</head>
+
+<body>
+  <!-- Barra Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-orange">
+    <a class="navbar-brand" href="index.html">
+      <img src="resources/img/cow.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      GAG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="animales.html">Animales<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="alimentacion.html">Alimentación</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="instalaciones.html">Instalaciones</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid pt-sm-3 pb-sm-4 px-sm-4 bg-lightgrey">
+
+    <img src="resources/img/barn.svg" width="40" height="40" class="float-left mt-sm-3 mr-sm-3" alt="">
+    <h1 class="display-4">Instalaciones</h1>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb bg-lightgrey">
+      <ol class="breadcrumb m-sm-n3">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Instalaciones</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container-fluid bg-grey text-center">
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+    <p class="lead category d-inline-block align-middle">Vacas</p>
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+  </div>
+
+
+  <div class="row justify-content-center bg-darkwhite">
+    <div class="card-deck mt-sm-3 mb-sm-4 px-sm-4">
+      <div class="card  shadow-sm" style="width: 13rem;">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/temperature.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Temperatura</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                34
+              </div>
+              ºC
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                93,2
+              </div>
+              ºF
+            </li>
+          </ul>
+          <div class="my-sm-2">
+          </div>
+          <!-- Boton gestion temperatura -->
+
+          <button type="button" class="btn btn-info" style="height: 3em ; width: 3em;" data-toggle="modal"
+            data-target="#Modal_TemperaturaVacas">
+            <img class="pb-sm-1 pt-sm-1 pr-sm-2" src="resources/img/control_temp.svg" width="32" height="32">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Modal_TemperaturaVacas" tabindex="-1" role="dialog"
+            aria-labelledby="Modal_TemperaturaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Modal_TemperaturaLabel">Gestión de temperatura - Vacas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="Slide_TemperarturaVacas">Temperatura<small> (ºC)</small></label>
+                      <br>
+                      <div class="float-left">
+                        <pre> 5     10     15      20     25</pre>
+                      </div>
+                      <div class="float-right">
+                        <pre>30     35     40     45 </pre>
+                      </div>
+                      <input type="range" class="custom-range" min="0" max="40" id="Slide_TemperarturaVacas" disabled>
+                    </div>
+                  </form>
+                  Off
+                  <div class="custom-control custom-switch d-inline-block">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" onClick="OnOff('Slide_TemperarturaVacas')">
+                    <label class="custom-control-label" for="customSwitch1">On</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-inline-block pl-sm-2 align-middle">
+            <small>Gestionar<br>temperatura
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/limpieza.svg" width="26" height="26">
+          <h4 class="card-title d-inline-block">Limpieza</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de última limpieza:<br>
+              <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                21/08/2020
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/ray.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Consumo</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                217
+              </div>
+              kWh
+              <small>[mes]</small>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                0.33
+              </div>
+              kW
+              <small>[hora]</small>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Agosto</small>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/gota.png" width="24" height="24">
+          <h4 class="card-title d-inline-block">Humedad</h4>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem; padding-right: 0xp;">
+                <b>51</b> %
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem;">
+                1,673
+              </div>
+              kg/m
+              <sup>3
+              </sup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Historial de alertas -->
+  <div class="row bg-lightgrey justify-content-center">
+    <button type="button" class="btn btn-success my-md-3" data-toggle="modal" data-target="#Modal_HistorialVacas">
+      <h5 class="text-center">Historial de Alertas</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 226 226"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,226v-226h226v226z" fill="none">
+          </path>
+          <g fill="#ffffff">
+            <path
+              d="M47.08333,9.41667c-10.35833,0 -18.83333,8.475 -18.83333,18.83333v131.83333h18.83333v-131.83333h113v-18.83333zM84.75,47.08333c-10.35833,
+              0 -18.83333,8.475 -18.83333,18.83333v131.83333c0,10.35833 8.475,18.83333 18.83333,18.83333h103.58333c10.35833,0 18.83333,-8.475 18.83333,
+             -18.83333v-131.83333c0,-10.40542 -8.42792,-18.83333 -18.83333,-18.83333zM84.75,65.91667h103.58333v131.83333h-103.58333zM103.58333,
+              84.75v18.83333h65.91667v-18.83333zM103.58333,122.41667v18.83333h65.91667v-18.83333zM103.58333,160.08333v18.83333h65.91667v-18.83333z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Modal Vacas -->
+  <div class="modal fade" id="Modal_HistorialVacas" tabindex="-1" role="dialog" aria-labelledby="Modal_HistorialLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-lightgrey">
+          <h4 class="modal-title" id="Modal_HistorialLabel">
+            <img src="https://img.icons8.com/material-outlined/40/000000/terms-and-conditions.png" />
+            Historial de Alertas - Vacas
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row py-sm-2 my-sm-1">
+            <div class="container-fluid">
+              [
+              <div class="text d-inline-block" style="color:orange;">
+                18/08/2020 - 22:55:03
+              </div>
+              ] Alerta de Temperatura: 
+              <div class="text-muted d-inline-block">
+                SEN-09
+              </div>
+              ha registrado
+              <div class="text d-inline-block" style="color:firebrick;">
+                45ºC
+              </div>
+              <img class="pb-sm-1 float-right d-inline-block" src="resources/img/temperature.png" width="26" height="26">
+            </div>
+          </div>
+            <div class="row py-sm-2 my-sm-1">
+              <div class="container-fluid">
+                [
+                <div class="text d-inline-block" style="color:orange;">
+                  10/08/2020 - 12:52:12
+                </div>
+                ] Alerta Seguridad: Posible acceso no autorizado en
+                <div class="text-muted d-inline-block">
+                  AC-07
+                </div>
+                <img class="pb-sm-1 float-right d-inline-block" src="resources/img/candado.svg" width="26" height="26">
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <div class="container-fluid">
+            <div class="row py-sm-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid bg-grey text-center">
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+    <p class="lead category d-inline-block align-middle">Gallinas</p>
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+  </div>
+
+  <div class="row justify-content-center bg-darkwhite">
+    <div class="card-deck mt-sm-3 mb-sm-4 px-sm-4">
+      <div class="card  shadow-sm" style="width: 13rem;">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/temperature.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Temperatura</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                30
+              </div>
+              ºC
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                86
+              </div>
+              ºF
+            </li>
+          </ul>
+          <div class="my-sm-2">
+          </div>
+          <!-- Boton gestion temperatura -->
+          <button type="button" class="btn btn-info" style="height: 3em ; width: 3em;" data-toggle="modal"
+            data-target="#Modal_TemperaturaGallinas">
+            <img class="pb-sm-1 pt-sm-1 pr-sm-2" src="resources/img/control_temp.svg" width="32" height="32">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Modal_TemperaturaGallinas" tabindex="-1" role="dialog"
+            aria-labelledby="Modal_TemperaturaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Modal_TemperaturaLabel">Gestión de temperatura - Gallinas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="Slide_TemperarturaGallinas">Temperatura<small> (ºC)</small></label>
+                      <br>
+                      <div class="float-left">
+                        <pre> 5     10     15      20     25</pre>
+                      </div>
+                      <div class="float-right">
+                        <pre>30     35     40     45 </pre>
+                      </div>
+                      <input type="range" class="custom-range" min="0" max="40" id="Slide_TemperarturaGallinas" disabled>
+                    </div>
+                  </form>
+                  Off
+                  <div class="custom-control custom-switch d-inline-block">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch2" onClick="OnOff('Slide_TemperarturaGallinas')">
+                    <label class="custom-control-label" for="customSwitch2">On</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-inline-block pl-sm-2 align-middle">
+            <small>Gestionar<br>temperatura
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/limpieza.svg" width="26" height="26">
+          <h4 class="card-title d-inline-block">Limpieza</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de última limpieza:<br>
+              <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                23/08/2020
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/ray.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Consumo</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                192
+              </div>
+              kWh
+              <small>[mes]</small>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                0.29
+              </div>
+              kW
+              <small>[hora]</small>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Agosto</small>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/gota.png" width="24" height="24">
+          <h4 class="card-title d-inline-block">Humedad</h4>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem; padding-right: 0xp;">
+                <b>42</b> %
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem;">
+                1,064
+              </div>
+              kg/m
+              <sup>3
+              </sup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Historial de alertas -->
+  <div class="row bg-lightgrey justify-content-center">
+    <button type="button" class="btn btn-success my-md-3" data-toggle="modal" data-target="#Modal_HistorialGallinas">
+      <h5 class="text-center">Historial de Alertas</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 226 226"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,226v-226h226v226z" fill="none">
+          </path>
+          <g fill="#ffffff">
+            <path
+              d="M47.08333,9.41667c-10.35833,0 -18.83333,8.475 -18.83333,18.83333v131.83333h18.83333v-131.83333h113v-18.83333zM84.75,47.08333c-10.35833,
+          0 -18.83333,8.475 -18.83333,18.83333v131.83333c0,10.35833 8.475,18.83333 18.83333,18.83333h103.58333c10.35833,0 18.83333,-8.475 18.83333,
+          -18.83333v-131.83333c0,-10.40542 -8.42792,-18.83333 -18.83333,-18.83333zM84.75,65.91667h103.58333v131.83333h-103.58333zM103.58333,
+          84.75v18.83333h65.91667v-18.83333zM103.58333,122.41667v18.83333h65.91667v-18.83333zM103.58333,160.08333v18.83333h65.91667v-18.83333z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Modal Gallinas -->
+  <div class="modal fade" id="Modal_HistorialGallinas" tabindex="-1" role="dialog"
+    aria-labelledby="Modal_HistorialLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-lightgrey">
+          <h4 class="modal-title" id="Modal_HistorialLabel">
+            <img src="https://img.icons8.com/material-outlined/40/000000/terms-and-conditions.png" />
+            Historial de Alertas - Gallinas
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <div class="container-fluid">
+            <div class="row py-sm-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid bg-grey text-center">
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+    <p class="lead category d-inline-block align-middle">Cerdos</p>
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+  </div>
+
+  <div class="row justify-content-center bg-darkwhite">
+    <div class="card-deck mt-sm-3 mb-sm-4 px-sm-4">
+      <div class="card  shadow-sm" style="width: 13rem;">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/temperature.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Temperatura</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                28
+              </div>
+              ºC
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                82,4
+              </div>
+              ºF
+            </li>
+          </ul>
+          <div class="my-sm-2">
+          </div>
+          <!-- Boton gestion temperatura -->
+
+          <button type="button" class="btn btn-info" style="height: 3em ; width: 3em;" data-toggle="modal"
+            data-target="#Modal_TemperaturaCerdos">
+            <img class="pb-sm-1 pt-sm-1 pr-sm-2" src="resources/img/control_temp.svg" width="32" height="32">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Modal_TemperaturaCerdos" tabindex="-1" role="dialog"
+            aria-labelledby="Modal_TemperaturaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Modal_TemperaturaLabel">Gestión de temperatura - Cerdos</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="Slide_TemperarturaCerdos">Temperatura<small> (ºC)</small></label>
+                      <br>
+                      <div class="float-left">
+                        <pre> 5     10     15      20     25</pre>
+                      </div>
+                      <div class="float-right">
+                        <pre>30     35     40     45 </pre>
+                      </div>
+                      <input type="range" class="custom-range" min="0" max="40" id="Slide_TemperarturaCerdos" disabled>
+                    </div>
+                  </form>
+                  Off
+                  <div class="custom-control custom-switch d-inline-block">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch3" onClick="OnOff('Slide_TemperarturaCerdos')">
+                    <label class="custom-control-label" for="customSwitch3">On</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-inline-block pl-sm-2 align-middle">
+            <small>Gestionar<br>temperatura
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/limpieza.svg" width="26" height="26">
+          <h4 class="card-title d-inline-block">Limpieza</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de última limpieza:<br>
+              <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                12/08/2020
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/ray.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Consumo</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                204
+              </div>
+              kWh
+              <small>[mes]</small>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                0.31
+              </div>
+              kW
+              <small>[hora]</small>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Agosto</small>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/gota.png" width="24" height="24">
+          <h4 class="card-title d-inline-block">Humedad</h4>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem; padding-right: 0xp;">
+                <b>56
+                </b> %
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem;">
+                1,937
+              </div>
+              kg/m
+              <sup>3
+              </sup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Historial de alertas -->
+  <div class="row bg-lightgrey justify-content-center">
+    <button type="button" class="btn btn-success my-md-3" data-toggle="modal" data-target="#Modal_HistorialCerdos">
+      <h5 class="text-center">Historial de Alertas</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 226 226"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,226v-226h226v226z" fill="none">
+          </path>
+          <g fill="#ffffff">
+            <path
+              d="M47.08333,9.41667c-10.35833,0 -18.83333,8.475 -18.83333,18.83333v131.83333h18.83333v-131.83333h113v-18.83333zM84.75,47.08333c-10.35833,
+          0 -18.83333,8.475 -18.83333,18.83333v131.83333c0,10.35833 8.475,18.83333 18.83333,18.83333h103.58333c10.35833,0 18.83333,-8.475 18.83333,
+          -18.83333v-131.83333c0,-10.40542 -8.42792,-18.83333 -18.83333,-18.83333zM84.75,65.91667h103.58333v131.83333h-103.58333zM103.58333,
+          84.75v18.83333h65.91667v-18.83333zM103.58333,122.41667v18.83333h65.91667v-18.83333zM103.58333,160.08333v18.83333h65.91667v-18.83333z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Modal Cerdos -->
+  <div class="modal fade" id="Modal_HistorialCerdos" tabindex="-1" role="dialog" aria-labelledby="Modal_HistorialLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-lightgrey">
+          <h4 class="modal-title" id="Modal_HistorialLabel">
+            <img src="https://img.icons8.com/material-outlined/40/000000/terms-and-conditions.png" />
+            Historial de Alertas - Cerdos
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <div class="container-fluid">
+            <div class="row py-sm-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid bg-grey text-center">
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+    <p class="lead category d-inline-block align-middle">Cabras</p>
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+  </div>
+
+  <div class="row justify-content-center bg-darkwhite">
+    <div class="card-deck mt-sm-3 mb-sm-4 px-sm-4">
+      <div class="card  shadow-sm" style="width: 13rem;">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/temperature.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Temperatura</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                33
+              </div>
+              ºC
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                91,4
+              </div>
+              ºF
+            </li>
+          </ul>
+          <div class="my-sm-2">
+          </div>
+          <!-- Boton gestion temperatura -->
+
+          <button type="button" class="btn btn-info" style="height: 3em ; width: 3em;" data-toggle="modal"
+            data-target="#Modal_TemperaturaCabras">
+            <img class="pb-sm-1 pt-sm-1 pr-sm-2" src="resources/img/control_temp.svg" width="32" height="32">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Modal_TemperaturaCabras" tabindex="-1" role="dialog"
+            aria-labelledby="Modal_TemperaturaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Modal_TemperaturaLabel">Gestión de temperatura - Cabras</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="Slide_TemperarturaCabras">Temperatura<small> (ºC)</small></label>
+                      <br>
+                      <div class="float-left">
+                        <pre> 5     10     15      20     25</pre>
+                      </div>
+                      <div class="float-right">
+                        <pre>30     35     40     45 </pre>
+                      </div>
+                      <input type="range" class="custom-range" min="0" max="40" id="Slide_TemperarturaCabras" disabled>
+                    </div>
+                  </form>
+                  Off
+                  <div class="custom-control custom-switch d-inline-block">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch4" onClick="OnOff('Slide_TemperarturaCabras')">
+                    <label class="custom-control-label" for="customSwitch4">On</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-inline-block pl-sm-2 align-middle">
+            <small>Gestionar<br>temperatura
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/limpieza.svg" width="26" height="26">
+          <h4 class="card-title d-inline-block">Limpieza</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de última limpieza:<br>
+              <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                17/08/2020
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/ray.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Consumo</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                193
+              </div>
+              kWh
+              <small>[mes]</small>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                0.28
+              </div>
+              kW
+              <small>[hora]</small>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Agosto</small>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/gota.png" width="24" height="24">
+          <h4 class="card-title d-inline-block">Humedad</h4>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem; padding-right: 0xp;">
+                <b>47</b> %
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem;">
+                1,589
+              </div>
+              kg/m
+              <sup>3
+              </sup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Historial de alertas -->
+  <div class="row bg-lightgrey justify-content-center">
+    <button type="button" class="btn btn-success my-md-3" data-toggle="modal" data-target="#Modal_HistorialCabras">
+      <h5 class="text-center">Historial de Alertas</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 226 226"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,226v-226h226v226z" fill="none">
+          </path>
+          <g fill="#ffffff">
+            <path
+              d="M47.08333,9.41667c-10.35833,0 -18.83333,8.475 -18.83333,18.83333v131.83333h18.83333v-131.83333h113v-18.83333zM84.75,47.08333c-10.35833,
+          0 -18.83333,8.475 -18.83333,18.83333v131.83333c0,10.35833 8.475,18.83333 18.83333,18.83333h103.58333c10.35833,0 18.83333,-8.475 18.83333,
+          -18.83333v-131.83333c0,-10.40542 -8.42792,-18.83333 -18.83333,-18.83333zM84.75,65.91667h103.58333v131.83333h-103.58333zM103.58333,
+          84.75v18.83333h65.91667v-18.83333zM103.58333,122.41667v18.83333h65.91667v-18.83333zM103.58333,160.08333v18.83333h65.91667v-18.83333z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Modal Cabras -->
+  <div class="modal fade" id="Modal_HistorialCabras" tabindex="-1" role="dialog" aria-labelledby="Modal_HistorialLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-lightgrey">
+          <h4 class="modal-title" id="Modal_HistorialLabel">
+            <img src="https://img.icons8.com/material-outlined/40/000000/terms-and-conditions.png" />
+            Historial de Alertas - Cabras
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <div class="container-fluid">
+            <div class="row py-sm-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid bg-grey text-center">
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+    <p class="lead category d-inline-block align-middle">Ovejas</p>
+    <img src="resources/img/granja.svg" class="low-op" width="30" height="30">
+  </div>
+
+  <div class="row justify-content-center bg-darkwhite">
+    <div class="card-deck mt-sm-3 mb-sm-4 px-sm-4">
+      <div class="card  shadow-sm" style="width: 13rem;">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/temperature.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Temperatura</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                30
+              </div>
+              ºC
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                85,6
+              </div>
+              ºF
+            </li>
+          </ul>
+          <div class="my-sm-2">
+          </div>
+          <!-- Boton gestion temperatura -->
+
+          <button type="button" class="btn btn-info" style="height: 3em ; width: 3em;" data-toggle="modal"
+            data-target="#Modal_TemperaturaOvejas">
+            <img class="pb-sm-1 pt-sm-1 pr-sm-2" src="resources/img/control_temp.svg" width="32" height="32">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="Modal_TemperaturaOvejas" tabindex="-1" role="dialog"
+            aria-labelledby="Modal_TemperaturaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Modal_TemperaturaLabel">Gestión de temperatura - Ovejas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="Slide_TemperarturaOvejas">Temperatura<small> (ºC)</small></label>
+                      <br>
+                      <div class="float-left">
+                        <pre> 5     10     15      20     25</pre>
+                      </div>
+                      <div class="float-right">
+                        <pre>30     35     40     45 </pre>
+                      </div>
+                      <input type="range" class="custom-range" min="0" max="40" id="Slide_TemperarturaOvejas" disabled>
+                    </div>
+                  </form>
+                  Off
+                  <div class="custom-control custom-switch d-inline-block">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch5"onClick="OnOff('Slide_TemperarturaOvejas')">
+                    <label class="custom-control-label" for="customSwitch5">On</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-inline-block pl-sm-2 align-middle">
+            <small>Gestionar<br>temperatura
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/limpieza.svg" width="26" height="26">
+          <h4 class="card-title d-inline-block">Limpieza</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de última limpieza:<br>
+              <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                20/08/2020
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/ray.png" width="25" height="25">
+          <h4 class="card-title d-inline-block">Consumo</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 2rem;">
+                178
+              </div>
+              kWh
+              <small>[mes]</small>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3em;">
+                0.27
+              </div>
+              kW
+              <small>[hora]</small>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Agosto</small>
+        </div>
+      </div>
+      <div class="card  shadow-sm">
+        <div class="card-body">
+          <img class="mb-sm-1" src="resources/img/gota.png" width="24" height="24">
+          <h4 class="card-title d-inline-block">Humedad</h4>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem; padding-right: 0xp;">
+                <b>45</b> %
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="badge badge-primary text-wrap" style="width: 3rem;">
+                1,424
+              </div>
+              kg/m
+              <sup>3
+              </sup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Historial de alertas -->
+  <div class="row bg-lightgrey justify-content-center">
+    <button type="button" class="btn btn-success my-md-3" data-toggle="modal" data-target="#Modal_HistorialOvejas">
+      <h5 class="text-center">Historial de Alertas</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 226 226"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,226v-226h226v226z" fill="none">
+          </path>
+          <g fill="#ffffff">
+            <path
+              d="M47.08333,9.41667c-10.35833,0 -18.83333,8.475 -18.83333,18.83333v131.83333h18.83333v-131.83333h113v-18.83333zM84.75,47.08333c-10.35833,
+          0 -18.83333,8.475 -18.83333,18.83333v131.83333c0,10.35833 8.475,18.83333 18.83333,18.83333h103.58333c10.35833,0 18.83333,-8.475 18.83333,
+          -18.83333v-131.83333c0,-10.40542 -8.42792,-18.83333 -18.83333,-18.83333zM84.75,65.91667h103.58333v131.83333h-103.58333zM103.58333,
+          84.75v18.83333h65.91667v-18.83333zM103.58333,122.41667v18.83333h65.91667v-18.83333zM103.58333,160.08333v18.83333h65.91667v-18.83333z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Modal Ovejas -->
+  <div class="modal fade" id="Modal_HistorialOvejas" tabindex="-1" role="dialog" aria-labelledby="Modal_HistorialLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-lightgrey">
+          <h4 class="modal-title" id="Modal_HistorialLabel">
+            <img src="https://img.icons8.com/material-outlined/40/000000/terms-and-conditions.png" />
+            Historial de Alertas - Ovejas
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <div class="container-fluid">
+            <div class="row py-sm-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid bg-grey">
+    <div class="row py-sm-3">
+      <a href="index.html" class="btn btn-secondary">
+        <svg class="bi bi-arrow-left-short" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+            clip-rule="evenodd" />
+          <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd" />
+        </svg>
+        Volver
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Integración de JS bootstrap (animaciones) -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="resources/js/instalacion.js"></script>
+
+</body>
+
+</html>
